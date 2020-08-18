@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/index.css';
+import {IMovie} from './components/movie-card/movie_card';
+import GetHeader from './components/header/header';
+import GetNavbar from './components/nav-bar/nav_bar';
+import {data} from './data/movies_data'
+import MovieList from './components/movie-list/movie_list';
+
 
 function App() {
+  const [movies, setMovies] = useState(data)
+
+  function clearMovies() {
+    setMovies([])
+  }
+  function addMovie() {
+    setMovies([...movies, data[0]])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <GetHeader header={"Movies Cards"}/>
+      <GetNavbar clearMovies={clearMovies} addMovie={addMovie}/>
+      <MovieList noDataMessage="No Movies Found" movies={movieAdapter(movies)} />
+    </React.Fragment>
   );
+}
+
+function movieAdapter(movies: Array<any>): Array<IMovie> {
+  return movies.map((movie: any) => {
+    const { Title, Year, Rank, Poster, imdbID, Type} = movie;
+    return { 
+      baseAdditionalInfoUrl: "http://imdb.com/title",
+      title: Title,
+      year: Year,
+      poster: Poster,
+      type: Type,
+      imdbID: imdbID,
+      rank: Rank
+    }
+  })
 }
 
 export default App;
