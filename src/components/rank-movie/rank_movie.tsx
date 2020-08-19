@@ -1,5 +1,5 @@
 import React, { JSXElementConstructor } from "react";
-import starIcon from "../../star_icon.svg";
+import starIcon from "../../svgs/star_icon.svg";
 
 interface IProps {
     stars: number

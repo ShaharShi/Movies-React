@@ -21,7 +21,8 @@
 .card-details {
     display: flex;
     justify-content: space-around;
-    margin: 5px 0;
+    align-items: center;
+    margin: 8px 0;
     padding: 10px 0;
     border: 1px solid;
     border-color: #cecece transparent #cecece transparent;
@@ -65,4 +66,9 @@
 }
 .list-poster {
     width: 120px;
+}
+
+.thumbs-up, .thumbs-down {
+    font-size: 1.3em;
+    background-color:
 }

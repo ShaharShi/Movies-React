@@ -1,5 +1,6 @@
 import React from "react";
 import RankMovie from "../rank-movie/rank_movie";
+import Likes from "../likes/likes";
 
 export interface IMovie {
     title: string,
@@ -23,15 +24,12 @@ export default function MovieCard(props: IMovie) {
         <div><RankMovie stars={ rank }/></div>
         <div className={"card-details"}>
             <div><b>Year :</b> {year} <br/> <b>Type :</b> {type}</div>
-            <div>
-
-            </div>
+            <Likes/>
         </div>
         {showLink && <a href={`${props.baseAdditionalInfoUrl}/${imdbID}`} target={"_blank"} className={"links"} >To Movie Page in IMDB <i className="fa fa-external-link fa-lg"></i></a>}
     </div>
     )
 }
-
 
 function isValidUrl(url: string): boolean {
     const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;

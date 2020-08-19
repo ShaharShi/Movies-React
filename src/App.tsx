@@ -29,7 +29,7 @@ function App() {
 
 function movieAdapter(movies: Array<any>): Array<IMovie> {
   return movies.map((movie: any) => {
-    const { Title, Year, Rank, Poster, imdbID, Type} = movie;
+    const { Title, Year, rank, Poster, imdbID, Type} = movie;
     return { 
       baseAdditionalInfoUrl: "http://imdb.com/title",
       title: Title,
@@ -37,7 +37,7 @@ function movieAdapter(movies: Array<any>): Array<IMovie> {
       poster: Poster,
       type: Type,
       imdbID: imdbID,
-      rank: Rank
+      rank: rank
     }
   })
 }
