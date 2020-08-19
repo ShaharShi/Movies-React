@@ -21,7 +21,7 @@ function App() {
   return (
     <React.Fragment>
       <GetHeader header={"Movies Cards"}/>
-      <GetNavbar clearMovies={clearMovies} addMovie={addMovie}/>
+      <GetNavbar clearMovies={clearMovies} addMovie={addMovie} />
       <MovieList noDataMessage="No Movies Found" movies={movieAdapter(movies)} />
     </React.Fragment>
   );
@@ -31,13 +31,13 @@ function movieAdapter(movies: Array<any>): Array<IMovie> {
   return movies.map((movie: any) => {
     const { Title, Year, rank, Poster, imdbID, Type} = movie;
     return { 
-      baseAdditionalInfoUrl: "http://imdb.com/title",
       title: Title,
       year: Year,
       poster: Poster,
       type: Type,
       imdbID: imdbID,
-      rank: rank
+      rank: rank,
+      baseAdditionalInfoUrl: "https://imdb.com/title",
     }
   })
 }
