@@ -37,7 +37,7 @@ export const data = [
     "imdbID": "tt0112462",
     "Type": "movie",
     "Poster": "https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
-    "rank": 4
+    "rank": 2
   },
   {
     "Title": "Batman & Robin",
@@ -53,7 +53,7 @@ export const data = [
     "imdbID": "tt4116284",
     "Type": "movie",
     "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg",
-    "rank": 4
+    "rank": 3
   },
   {
     "Title": "Batman: The Animated Series",
@@ -77,6 +77,6 @@ export const data = [
     "imdbID": "tt2313197",
     "Type": "movie",
     "Poster": "https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg",
-    "rank": 4
+    "rank": 2
   }
 ]
